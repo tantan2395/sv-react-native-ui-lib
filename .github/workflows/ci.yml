@@ -52,6 +52,6 @@ jobs:
 
       - name: Publish to NPM
         if: success() && github.ref == 'refs/heads/main'
-        run: yarn release
+        run: yarn release --npm.skipChecks
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
