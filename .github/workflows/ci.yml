@@ -60,6 +60,7 @@ jobs:
 
       - name: Publish to NPM
         if: success() && github.ref == 'refs/heads/main'
-        run: yarn release --npm.skipChecks
+        run: yarn release
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
