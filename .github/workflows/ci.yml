@@ -50,6 +50,11 @@ jobs:
       - name: Build package
         run: yarn prepare
 
+      - name: Set git user
+        run: |
+          git config --global user.name "Jonathan Cantora"
+          git config --global user.email "tantancantora@gmail.com"
+
       - name: Log in to npm
         run: echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" > ~/.npmrc
 
