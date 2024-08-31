@@ -21,6 +21,7 @@ jobs:
         run: |
           git config --global user.name "Jonathan Cantora"
           git config --global user.email "tantancantora@gmail.com"
+          git config --global user.signingKey ${{ secrets.SIGNING_KEY }}
 
       - name: Log in to npm
         run: echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" > ~/.npmrc
