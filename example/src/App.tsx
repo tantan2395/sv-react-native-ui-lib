@@ -1,30 +1,30 @@
-import { useState, useEffect } from 'react';
-import { StyleSheet, View, Text } from 'react-native';
-import { multiply } from 'sv-react-native-ui-lib';
+import { StyleSheet, View } from 'react-native';
+import { Button } from 'sv-react-native-ui-lib';
 
 export default function App() {
-  const [result, setResult] = useState<number | undefined>();
-
-  useEffect(() => {
-    multiply(3, 7).then(setResult);
-  }, []);
+  const icon = require('../assets/icon.png');
 
   return (
-    <View style={styles.container}>
-      <Text>Result: {result}</Text>
+    <View style={styles.main}>
+      <Button
+        label="Button CTA 1"
+        leadingIconSrc={icon}
+        trailingIconSrc={icon}
+      />
+
+      <Button
+        label="Button CTA 2"
+        leadingIconSrc={icon}
+        trailingIconSrc={icon}
+      />
     </View>
   );
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  box: {
-    width: 60,
-    height: 60,
-    marginVertical: 20,
+  main: {
+    margin: 20,
+    flexDirection: 'row',
+    flexWrap: 'wrap',
   },
 });
