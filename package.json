@@ -40,6 +40,7 @@
     "test": "jest",
     "typecheck": "tsc",
     "lint": "eslint \"**/*.{js,ts,tsx}\"",
+    "lint:fix": "eslint . --fix",
     "clean": "del-cli lib",
     "prepare": "bob build",
     "release": "release-it --ci"
