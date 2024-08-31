@@ -20,6 +20,7 @@ export interface ButtonProps {
   iconHeight?: number;
   iconWidth?: number;
   onPress?: () => void;
+  testID?: string;
 }
 
 /**
@@ -34,6 +35,7 @@ export interface ButtonProps {
  * @property {number} [iconHeight] - Optional height of the icons in pixels.
  * @property {number} [iconWidth] - Optional width of the icons in pixels.
  * @property {() => void} [onPress] - Optional callback triggered when the button is pressed.
+ * @property {string} [testID] - Optional Used to locate this view in end-to-end tests.
  */
 const Button: React.FC<ButtonProps> = (props) => {
   const buttonCustomMainStyle = () => {
@@ -69,10 +71,14 @@ const Button: React.FC<ButtonProps> = (props) => {
   };
 
   return (
-    <Pressable onPress={props.onPress}>
+    <Pressable onPress={props.onPress} testID={`${props.testID}-button`}>
       <View style={[styles.main, styles.button, buttonCustomMainStyle()]}>
         {props.leadingIconSrc && renderIcon(props.leadingIconSrc)}
-        {props.label && <Text style={styles.label}>{props.label}</Text>}
+        {props.label && (
+          <Text style={styles.label} testID={`${props.testID}-button-label`}>
+            {props.label}
+          </Text>
+        )}
         {props.trailingIconSrc && renderIcon(props.trailingIconSrc)}
       </View>
     </Pressable>
