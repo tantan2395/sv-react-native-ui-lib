@@ -112,6 +112,10 @@
       "commitMessage": "chore: release ${version}",
       "tagName": "v${version}"
     },
+    "src": {
+      "commitArgs": "-S",
+      "tagArgs": "-S"
+    },
     "npm": {
       "publish": true
     },
