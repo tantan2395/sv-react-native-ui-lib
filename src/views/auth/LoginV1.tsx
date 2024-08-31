@@ -14,9 +14,11 @@ export interface LoginV1Props {
 /**
  * LoginV1 component properties
  *
- * @property {number} [height] - Optional height of the button in pixels.
- * @property {number} [width] - Optional width of the button in pixels.
- * @property {() => void} [onPress] - Optional callback triggered when the button is pressed.
+ * @property {() => void;} [googleSignIn] - Optional callback triggered when the button is pressed.
+ * @property {() => void;} [facebookSignIn] - Optional callback triggered when the button is pressed.
+ * @property {string} [testID] - Optional Used to locate this view in end-to-end tests.
+ * @property {string} [header] - Optional text displayed as a Header.
+ * @property {string} [subHeader] - Optional text displayed as a SubHeader.
  *
  */
 const LoginV1: React.FC<LoginV1Props> = (props) => {
