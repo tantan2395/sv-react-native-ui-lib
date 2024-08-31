@@ -1,5 +1,4 @@
 name: Build and Deploy
-description: Will build the library and will publish it to NPM
 on:
   push:
     branches:

@@ -1,5 +1,4 @@
 name: Test
-description: Lint, typecheck, and unit tests
 on:
   pull_request:
     branches:
