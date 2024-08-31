@@ -10,15 +10,6 @@ npm install sv-react-native-ui-lib
 
 ## Usage
 
-<!-- 
-```js
-import { multiply } from 'sv-react-native-ui-lib';
-
-// ...
-
-const result = await multiply(3, 7);
-``` -->
-
 
 ## Contributing
 
