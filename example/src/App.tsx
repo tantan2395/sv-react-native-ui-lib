@@ -1,18 +1,53 @@
 import { StyleSheet, View } from 'react-native';
-import { LoginV1 } from 'sv-react-native-ui-lib';
+import {
+  Button,
+  ButtonVariant,
+  Card,
+  Column,
+  Label,
+  Row,
+} from 'sv-react-native-ui-lib';
 
 export default function App() {
-  // const icon = require('../assets/icon.png');
+  const icon = require('../assets/icon.png');
 
   return (
     <View style={styles.main}>
-      {/* <Button
-        label="Button CTA 1"
-        leadingIconSrc={icon}
-        trailingIconSrc={icon}
-      /> */}
+      <Card>
+        <Column>
+          <Button
+            variant={ButtonVariant.IconOnly}
+            leadingIconSrc={icon}
+            height={32}
+            width={32}
+          />
+          <Button
+            variant={ButtonVariant.IconOnly}
+            leadingIconSrc={icon}
+            height={32}
+            width={32}
+          />
+        </Column>
+      </Card>
 
-      <LoginV1 />
+      <Card>
+        <Row justifyContent="space-around" alignItems="flex-end">
+          <Button
+            variant={ButtonVariant.IconOnly}
+            leadingIconSrc={icon}
+            height={32}
+            width={32}
+          />
+          <Button
+            variant={ButtonVariant.IconOnly}
+            leadingIconSrc={icon}
+            height={32}
+            width={32}
+          />
+        </Row>
+      </Card>
+
+      <Label text="Hello World" fontWeight={'200'} />
     </View>
   );
 }
